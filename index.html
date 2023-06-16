@@ -31,12 +31,12 @@
             }
 
             .intro h1 {
-                font-size: 24px;
+                font-size: 40px;
                 font-weight: bold;
             }
 
             .intro p {
-                font-size: 16px;
+                font-size: 24px;
             }
 
             ul {
@@ -102,11 +102,27 @@
             h2 {
                 margin: 10px 0;
             }
+
+            .scroll-background {
+                position: fixed;
+                top: 500px;
+                /* スクロールが開始する高さ */
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.7);
+                /* 背景色を指定 */
+                pointer-events: none;
+                z-index: -1;
+                opacity: 1;
+                transition: opacity 0.3s;
+            }
         </style>
 
     </head>
 
     <body>
+        <div class="scroll-background"></div>
         <div class="intro">
             <h1>村越潤也</h1>
             <p>ICUHS42期卒業生</p>
@@ -194,10 +210,19 @@
                             <h2>お楽しみ</h2>
                         </div>
                     </div>
-
                 </li>
             </ul>
         </div>
-    </body>
+      <script>
+    window.addEventListener('scroll', function () {
+        var scrollBackground = document.querySelector('.scroll-background');
+        var introBlock = document.querySelector('#block1');
+        var introHeight = introBlock.offsetTop;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var opacity = Math.max(0, Math.min(1, 1 - (scrollTop - introHeight + 200) / 200));
 
+        scrollBackground.style.opacity = opacity;
+    });
+</script>
+    </body>
 </html>
