@@ -17,6 +17,7 @@
                 flex-direction: column;
                 align-items: center;
             }
+            
             .intro {
                 text-align: center;
                 margin-top: 100px;
@@ -45,6 +46,29 @@
             .monochrome {
                 filter: grayscale(80%);
             }
+
+            .image-container {
+                position: relative;
+                display: inline-block;
+            }
+
+            .overlay-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(0, 0, 0, 0.7);
+                padding: 20px;
+                color: #fff;
+                text-align: center;
+            }
+
+            .overlay-text h2 {
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
 
             .block {
                 margin: 100px;
@@ -78,63 +102,88 @@
             </div>
             <ul>
                 <li id="block1" class="block">
-                    <img
-                        class="monochrome"
-                        src="image/IMG_5248.jpeg"
-                        alt="外灘バックピン写"
-                        width="400"
-                        height="400">
-                    <h2>自己紹介</h2>
+                    <div class="image-container">
+                        <img
+                            class="monochrome"
+                            src="image/IMG_5248.jpeg"
+                            alt="外灘バックピン写"
+                            width="400"
+                            height="400">
+                        <div class="overlay-text">
+                            <h2>自己紹介</h2>
+                        </div>
+                    </div>
                 </li>
                 <li id="block2" class="block">
+                    <div class="image-container">
+                        <img
+                            class="monochrome"
+                            src="image/eiken.jpeg"
+                            alt="英検準一級合格発表"
+                            width="400"
+                            height="400">
+                        <div class="overlay-text">
+                            <h2>高校入試</h2>
+                        </div>
+                    </div>
 
-                    <img
-                        class="monochrome"
-                        src="image/eiken.jpeg"
-                        alt="英検準一級合格発表"
-                        width="400"
-                        height="400">
-                    <h2>高校入試</h2>
                 </li>
                 <li id="block3" class="block">
-
+                    <div class="image-container">
                     <img
                         class="monochrome"
                         src="image/IMG_3960.jpeg"
                         alt="学祭青春ショット"
                         width="400"
                         height="400">
-                    <h2>高校生活</h2>
+                    <div class="overlay-text">
+                        <h2>高校生活</h2>
+                    </div>
+                    </div>
+                    
                 </li>
                 <li id="block4" class="block">
-
-                    <img
+                    <div class="image-container">
+                        <img
                         class="monochrome"
                         src="image/IMG_9854.JPG"
                         alt="黒板数学"
                         width="400"
                         height="400">
-                    <h2>大学入試</h2>
+                        <div class="overlay-text">
+                            <h2>大学入試</h2>
+                        </div>
+                    </div>
+                    
+                    
                 </li>
                 <li id="block5" class="block">
-
-                    <img
+                    <div class="image-container">
+                        <img
                         class="monochrome"
                         src="image/IMG_5074.jpeg"
                         alt="东大门"
                         width="400"
                         height="400">
-                    <h2>大学生活</h2>
+                        <div class="overlay-text">
+                            <h2>大学生活</h2>
+                        </div>
+                    </div>
                 </li>
                 <li id="block6" class="block">
-
-                    <img
+                    <div class="image-container">
+                        <img
                         class="monochrome"
                         src="image/KIF_2203.jpg"
                         alt="幼少期レンガ顔出し"
                         width="400"
                         height="400">
-                    <h2>お楽しみ</h2>
+                        <div class="overlay-text">
+                            <h2>お楽しみ</h2>
+                        </div>
+                    </div>
+                    
+                    
                 </li>
             </ul>
         </div>
