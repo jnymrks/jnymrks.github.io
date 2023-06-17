@@ -110,7 +110,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: rgba(0, 0, 0, 0.7);
+                background-color: rgba(188, 255, 255, 0.7);
                 /* 背景色を指定 */
                 pointer-events: none;
                 z-index: -1;
@@ -124,7 +124,7 @@
     <body>
         <div class="scroll-background"></div>
         <div class="intro">
-            <h1>村越潤也</h1>
+            <h1>村 越 潤 也</h1>
             <p>ICUHS42期卒業生</p>
         </div>
         <div class="container">
@@ -219,7 +219,7 @@
         var introBlock = document.querySelector('#block1');
         var introHeight = introBlock.offsetTop;
         var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        var opacity = Math.max(0, Math.min(1, 1 - (scrollTop - introHeight + 200) / 200));
+        var opacity = Math.max(0, Math.min(1, 1 - (scrollTop - introHeight + 200) / 1000));
 
         scrollBackground.style.opacity = opacity;
     });
