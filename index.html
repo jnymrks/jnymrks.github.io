@@ -4,7 +4,7 @@
 
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <title>My LIFE</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -89,6 +89,8 @@
                 width: 400px;
                 height: 400px;
                 background-color: #f2f2f2;
+                transition: filter 0.2s;
+                /* フィルターの変化をアニメーション化 */
             }
 
             .block h2 {
@@ -110,12 +112,15 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: rgba(188, 255, 255, 0.7);
+                background-color: rgb(201, 197, 240);
                 /* 背景色を指定 */
                 pointer-events: none;
                 z-index: -1;
                 opacity: 1;
                 transition: opacity 0.3s;
+            }
+            .block:not(.monochrome):hover img {
+                filter: none;
             }
         </style>
 
@@ -175,8 +180,8 @@
                     <div class="image-container">
                         <img
                             class="monochrome"
-                            src="image/IMG_9854.JPG"
-                            alt="黒板数学"
+                            src="image/IMG_2157.jpeg"
+                            alt="ぐうたら"
                             width="400"
                             height="400">
                         <div class="overlay-text">
@@ -207,22 +212,63 @@
                             width="400"
                             height="400">
                         <div class="overlay-text">
-                            <h2>お楽しみ</h2>
+                            <h2>その他</h2>
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
-      <script>
-    window.addEventListener('scroll', function () {
-        var scrollBackground = document.querySelector('.scroll-background');
-        var introBlock = document.querySelector('#block1');
-        var introHeight = introBlock.offsetTop;
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        var opacity = Math.max(0, Math.min(1, 1 - (scrollTop - introHeight + 200) / 1000));
+        <script>
+            window.addEventListener('scroll', function () {
+                var scrollBackground = document.querySelector('.scroll-background');
+                var introBlock = document.querySelector('#block1');
+                var introHeight = introBlock.offsetTop;
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                var opacity = Math.max(
+                    0,
+                    Math.min(1, 1 - (scrollTop - introHeight + 200) / 1000)
+                );
 
-        scrollBackground.style.opacity = opacity;
-    });
-</script>
+                scrollBackground.style.opacity = opacity;
+            });
+
+            var blocks = document.querySelectorAll('.block');
+            var animationId;
+
+            blocks.forEach(function (block) {
+                block.addEventListener('mouseenter', function () {
+                    cancelAnimationFrame(animationId); // 既存のアニメーションをキャンセル
+                    animateBlock(block, 0); // アニメーションを開始
+                });
+
+                block.addEventListener('mouseleave', function () {
+                    cancelAnimationFrame(animationId); // アニメーションをキャンセル
+                    animateBlock(block, 100); // アニメーションを逆方向で開始（モノクロに戻す）
+                });
+            });
+
+            function animateBlock(block, targetValue) {
+                var currentValue = 100; // 初期値はモノクロ（100%）
+                var startTime = null;
+
+                function step(timestamp) {
+                    if (!startTime) 
+                        startTime = timestamp;
+                    var progress = timestamp - startTime;
+                    var ratio = Math.min(progress / 500, 1); // アニメーション時間を500msに設定
+
+                    // モノクロからフルカラーに徐々に変化させる
+                    var value = currentValue + (targetValue - currentValue) * ratio;
+
+                    block.style.filter = 'grayscale(' + value + '%)';
+
+                    if (ratio < 1) {
+                        animationId = requestAnimationFrame(step); // 次のフレームをリクエスト
+                    }
+                }
+
+                animationId = requestAnimationFrame(step); // アニメーションを開始
+            }
+        </script>
     </body>
 </html>
