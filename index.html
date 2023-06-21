@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 
     <head>
@@ -44,7 +43,7 @@
             }
 
             .monochrome {
-                filter: grayscale(80%);
+                filter: grayscale(100%);
             }
 
             .image-container {
@@ -91,6 +90,7 @@
                 background-color: #f2f2f2;
                 transition: filter 0.2s;
                 /* フィルターの変化をアニメーション化 */
+                cursor: pointer;
             }
 
             .block h2 {
@@ -122,6 +122,38 @@
             .block:not(.monochrome):hover img {
                 filter: none;
             }
+
+            .popup {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                max-width: 1600px;
+                height: 90%;
+                max-height: 1500px;
+                background-color: #fffaf0;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                overflow: auto;
+                display: none;
+                z-index: 999;
+            }
+
+            .popup-content {
+                padding: 20px;
+            }
+
+            .close-button {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                padding: 5px;
+                border: none;
+                background-color: transparent;
+                font-size: 100px;
+                cursor: pointer;
+            }
         </style>
 
     </head>
@@ -135,7 +167,7 @@
         <div class="container">
 
             <ul>
-                <li id="block1" class="block">
+                <li id="block1" class="block" data-content="自己紹介">
                     <div class="image-container">
                         <img
                             class="monochrome"
@@ -148,7 +180,7 @@
                         </div>
                     </div>
                 </li>
-                <li id="block2" class="block">
+                <li id="block2" class="block" data-content="高校入試">
                     <div class="image-container">
                         <img
                             class="monochrome"
@@ -162,7 +194,7 @@
                     </div>
 
                 </li>
-                <li id="block3" class="block">
+                <li id="block3" class="block" data-content="高校生活">
                     <div class="image-container">
                         <img
                             class="monochrome"
@@ -176,7 +208,7 @@
                     </div>
 
                 </li>
-                <li id="block4" class="block">
+                <li id="block4" class="block" data-content="大学入試">
                     <div class="image-container">
                         <img
                             class="monochrome"
@@ -190,7 +222,7 @@
                     </div>
 
                 </li>
-                <li id="block5" class="block">
+                <li id="block5" class="block" data-content="大学生活">
                     <div class="image-container">
                         <img
                             class="monochrome"
@@ -203,7 +235,7 @@
                         </div>
                     </div>
                 </li>
-                <li id="block6" class="block">
+                <li id="block6" class="block" data-content="その他">
                     <div class="image-container">
                         <img
                             class="monochrome"
@@ -217,6 +249,13 @@
                     </div>
                 </li>
             </ul>
+        </div>
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <button id="closeButton" class="close-button">&times;</button>
+                <div id="popupImageContainer"></div>
+                <p id="popupText"></p>
+            </div>
         </div>
         <script>
             window.addEventListener('scroll', function () {
@@ -269,6 +308,39 @@
 
                 animationId = requestAnimationFrame(step); // アニメーションを開始
             }
+
+            var blocks = document.querySelectorAll('.block');
+            var popup = document.getElementById('popup');
+            var popupImageContainer = document.getElementById('popupImageContainer');
+            var popupText = document.getElementById('popupText');
+            var closeButton = document.getElementById('closeButton');
+
+            blocks.forEach(function (block) {
+                block.addEventListener('click', function () {
+                    var imageContainer = block.querySelector('.image-container');
+                    var image = imageContainer.querySelector('img');
+                    var alt = image.getAttribute('alt');
+                    var src = image.getAttribute('src');
+                    var text = block
+                        .querySelector('h2')
+                        .textContent;
+
+                    popupImageContainer.innerHTML = '';
+                    var popupImage = document.createElement('img');
+                    popupImage.src = src;
+                    popupImage.alt = alt;
+                    popupImage.style.width = '30%';
+                    popupImage.style.height = 'auto';
+                    popupImageContainer.appendChild(popupImage);
+
+                    popupText.textContent = text;
+                    popup.style.display = 'block';
+                });
+            });
+
+            closeButton.addEventListener('click', function () {
+                popup.style.display = 'none';
+            });
         </script>
     </body>
 </html>
