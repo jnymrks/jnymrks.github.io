@@ -22,10 +22,6 @@
                 text-align: center;
                 padding-top: 100px;
                 padding-bottom: 50px;
-                /* background-image: url("image/IMG_5076.jpeg");
-                background-repeat: no-repeat;
-                background-size: 100% auto;
-                background-position: center; */
                 background-color: rgba(255, 255, 255, 0.7);
             }
 
@@ -108,22 +104,23 @@
             .scroll-background {
                 position: fixed;
                 top: 500px;
-                /* スクロールが開始する高さ */
+
                 left: 0;
                 right: 0;
                 bottom: 0;
                 background-color: rgb(201, 197, 240);
-                /* 背景色を指定 */
+
                 pointer-events: none;
                 z-index: -1;
                 opacity: 1;
                 transition: opacity 0.3s;
             }
+
             .block:not(.monochrome):hover img {
                 filter: none;
             }
 
-            .popup {
+            /* .popup {
                 position: fixed;
                 top: 50%;
                 left: 50%;
@@ -142,6 +139,51 @@
 
             .popup-content {
                 padding: 20px;
+            } */
+
+            .detail-page {
+                /* 以下のスタイルを追加 */
+                display:none;
+                position: fixed;
+                top: 5%;
+                left: 5%;
+                width: 90%;
+                height: 90%;
+                background-color: #fffaf0;
+                z-index: 2;
+                overflow: auto;
+            }
+
+            .detail-page-content {
+                padding: 20px;
+                color: #fff;
+            }
+
+            /* .detail-page {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #fffaf0;
+                text-align: center;
+            }
+
+            .detail-page-content {
+                padding: 20px;
+            }
+            */
+            .detail-page.active {
+                display: block;
+            } 
+
+            
+
+            .detail-page h3 {
+                font-size: 20px;
+                font-weight: bold;
+                color: #000;
             }
 
             .close-button {
@@ -165,98 +207,137 @@
             <p>ICUHS42期卒業生</p>
         </div>
         <div class="container">
-
-            <ul>
-                <li id="block1" class="block" data-content="自己紹介">
-                    <div class="image-container">
-                        <img
-                            class="monochrome"
-                            src="image/IMG_5248.jpeg"
-                            alt="外灘バックピン写"
-                            width="400"
-                            height="400">
-                        <div class="overlay-text">
-                            <h2>自己紹介</h2>
-                        </div>
-                    </div>
-                </li>
-                <li id="block2" class="block" data-content="高校入試">
-                    <div class="image-container">
-                        <img
-                            class="monochrome"
-                            src="image/eiken.jpeg"
-                            alt="英検準一級合格発表"
-                            width="400"
-                            height="400">
-                        <div class="overlay-text">
-                            <h2>高校入試</h2>
-                        </div>
-                    </div>
-
-                </li>
-                <li id="block3" class="block" data-content="高校生活">
-                    <div class="image-container">
-                        <img
-                            class="monochrome"
-                            src="image/IMG_3960.jpeg"
-                            alt="学祭青春ショット"
-                            width="400"
-                            height="400">
-                        <div class="overlay-text">
-                            <h2>高校生活</h2>
-                        </div>
-                    </div>
-
-                </li>
-                <li id="block4" class="block" data-content="大学入試">
-                    <div class="image-container">
-                        <img
-                            class="monochrome"
-                            src="image/IMG_2157.jpeg"
-                            alt="ぐうたら"
-                            width="400"
-                            height="400">
-                        <div class="overlay-text">
-                            <h2>大学入試</h2>
-                        </div>
-                    </div>
-
-                </li>
-                <li id="block5" class="block" data-content="大学生活">
-                    <div class="image-container">
-                        <img
-                            class="monochrome"
-                            src="image/IMG_5074.jpeg"
-                            alt="东大门"
-                            width="400"
-                            height="400">
-                        <div class="overlay-text">
-                            <h2>大学生活</h2>
-                        </div>
-                    </div>
-                </li>
-                <li id="block6" class="block" data-content="その他">
-                    <div class="image-container">
-                        <img
-                            class="monochrome"
-                            src="image/KIF_2203.jpg"
-                            alt="幼少期レンガ顔出し"
-                            width="400"
-                            height="400">
-                        <div class="overlay-text">
-                            <h2>その他</h2>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div id="popup" class="popup">
-            <div class="popup-content">
-                <button id="closeButton" class="close-button">&times;</button>
-                <div id="popupImageContainer"></div>
-                <p id="popupText"></p>
+            <div
+                id="block1"
+                class="block"
+                data-content="自己紹介"
+                onclick="openDetailPage(event, 'detail-page1')">
+                <img
+                    class="monochrome"
+                    src="image/IMG_5248.jpeg"
+                    alt="外灘バックピン写"
+                    width="400"
+                    height="400">
+                <div class="overlay-text">
+                    <h2>自己紹介</h2>
+                </div>
+            </div>
+            <div
+                id="block2"
+                class="block"
+                data-content="高校入試"
+                onclick="openDetailPage(event, 'detail-page2')">
+                <img
+                    class="monochrome"
+                    src="image/eiken.jpeg"
+                    alt="英検準一級合格発表"
+                    width="400"
+                    height="400">
+                <div class="overlay-text">
+                    <h2>高校入試</h2>
+                </div>
+            </div>
+            <div
+                id="block3"
+                class="block"
+                data-content="高校生活"
+                onclick="openDetailPage(event, 'detail-page3')">
+                <img
+                    class="monochrome"
+                    src="image/IMG_3960.jpeg"
+                    alt="学祭青春ショット"
+                    width="400"
+                    height="400">
+                <div class="overlay-text">
+                    <h2>高校生活</h2>
+                </div>
+            </div>
+            <div
+                id="block4"
+                class="block"
+                data-content="大学入試"
+                onclick="openDetailPage(event, 'detail-page4')">
+                <img
+                    class="monochrome"
+                    src="image/IMG_2157.jpeg"
+                    alt="ぐうたら"
+                    width="400"
+                    height="400">
+                <div class="overlay-text">
+                    <h2>大学入試</h2>
+                </div>
+            </div>
+            <div
+                id="block5"
+                class="block"
+                data-content="大学生活"
+                onclick="openDetailPage(event, 'detail-page5')">
+                <img
+                    class="monochrome"
+                    src="image/IMG_5074.jpeg"
+                    alt="东大门"
+                    width="400"
+                    height="400">
+                <div class="overlay-text">
+                    <h2>大学生活</h2>
+                </div>
+            </div>
+            <div
+                id="block6"
+                class="block"
+                data-content="その他"
+                onclick="openDetailPage(event, 'detail-page6')">
+                <img
+                    class="monochrome"
+                    src="image/KIF_2203.jpg"
+                    alt="幼少期レンガ顔出し"
+                    width="400"
+                    height="400">
+                <div class="overlay-text">
+                    <h2>その他</h2>
+                </div>
+            </div>
+            <div id="detail-page1" class="detail-page">
+                <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
+                <div class="detail-page-content">
+                    <h3>自己紹介の詳細ページ</h3>
+                </div>
+            </div>
+            <div id="detail-page2" class="detail-page">
+                <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
+                <div class="detail-page-content">
+                    <h3>高校入試の詳細ページ</h3>
+                </div>
+            </div>
+            <div id="detail-page3" class="detail-page">
+                <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
+                <div class="detail-page-content">
+                    <h3>高校生活の詳細ページ</h3>
+                </div>
+            </div>
+            <div id="detail-page4" class="detail-page">
+                <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
+                <div class="detail-page-content">
+                    <h3>大学入試の詳細ページ</h3>
+                </div>
+            </div>
+            <div id="detail-page5" class="detail-page">
+                <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
+                <div class="detail-page-content">
+                    <h3>大学生活の詳細ページ</h3>
+                </div>
+            </div>
+            <div id="detail-page6" class="detail-page">
+                <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
+                <div class="detail-page-content">
+                    <h3>その他の詳細ページ</h3>
+                </div>
             </div>
         </div>
+
+        <!-- <div id="popup" class="popup"> <div class="popup-content"> <button
+        id="closeButton" class="close-button">&times;</button> <div
+        id="popupImageContainer"></div> <p id="popupText"></p> </div> </div> -->
         <script>
             window.addEventListener('scroll', function () {
                 var scrollBackground = document.querySelector('.scroll-background');
@@ -309,38 +390,39 @@
                 animationId = requestAnimationFrame(step); // アニメーションを開始
             }
 
-            var blocks = document.querySelectorAll('.block');
-            var popup = document.getElementById('popup');
-            var popupImageContainer = document.getElementById('popupImageContainer');
-            var popupText = document.getElementById('popupText');
-            var closeButton = document.getElementById('closeButton');
+            function openDetailPage(event, detailPageId) {
+                const detailPage = document.getElementById(detailPageId);
+                detailPage
+                    .classList
+                    .add('active');
+            }
 
-            blocks.forEach(function (block) {
-                block.addEventListener('click', function () {
-                    var imageContainer = block.querySelector('.image-container');
-                    var image = imageContainer.querySelector('img');
-                    var alt = image.getAttribute('alt');
-                    var src = image.getAttribute('src');
-                    var text = block
-                        .querySelector('h2')
-                        .textContent;
+            function closeDetailPage(event) {
+                const detailPage = event
+                    .target
+                    .closest('.detail-page');
+                detailPage
+                    .classList
+                    .remove('active');
+            }
 
-                    popupImageContainer.innerHTML = '';
-                    var popupImage = document.createElement('img');
-                    popupImage.src = src;
-                    popupImage.alt = alt;
-                    popupImage.style.width = '30%';
-                    popupImage.style.height = 'auto';
-                    popupImageContainer.appendChild(popupImage);
-
-                    popupText.textContent = text;
-                    popup.style.display = 'block';
-                });
-            });
-
-            closeButton.addEventListener('click', function () {
-                popup.style.display = 'none';
-            });
+            // var blocks = document.querySelectorAll('.block'); var popup =
+            // document.getElementById('popup'); var popupImageContainer =
+            // document.getElementById('popupImageContainer'); var popupText =
+            // document.getElementById('popupText'); var closeButton =
+            // document.getElementById('closeButton'); blocks.forEach(function (block) {
+            // block.addEventListener('click', function () {         var imageContainer =
+            // block.querySelector('.image-container');         var image =
+            // imageContainer.querySelector('img');         var alt =
+            // image.getAttribute('alt');         var src = image.getAttribute('src'); var
+            // text = block             .querySelector('h2')             .textContent;
+            // popupImageContainer.innerHTML = '';         var popupImage =
+            // document.createElement('img');         popupImage.src = src; popupImage.alt =
+            // alt;         popupImage.style.width = '30%'; popupImage.style.height =
+            // 'auto'; popupImageContainer.appendChild(popupImage); popupText.textContent =
+            // text;         popup.style.display = 'block';     }); });
+            // closeButton.addEventListener('click', function () { popup.style.display =
+            // 'none'; });
         </script>
     </body>
 </html>
