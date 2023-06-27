@@ -108,7 +108,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: rgb(201, 197, 240);
+                background-color: #ffdbb3;
 
                 pointer-events: none;
                 z-index: -1;
@@ -119,27 +119,6 @@
             .block:not(.monochrome):hover img {
                 filter: none;
             }
-
-            /* .popup {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 90%;
-                max-width: 1600px;
-                height: 90%;
-                max-height: 1500px;
-                background-color: #fffaf0;
-                border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-                overflow: auto;
-                display: none;
-                z-index: 999;
-            }
-
-            .popup-content {
-                padding: 20px;
-            } */
 
             .detail-page {
                 /* 以下のスタイルを追加 */
@@ -152,6 +131,7 @@
                 background-color: #fffaf0;
                 z-index: 2;
                 overflow: auto;
+                border: dashed 5px #432f2f;
             }
 
             .detail-page-content {
@@ -178,11 +158,16 @@
                 display: block;
             } 
 
-            
-
+        
             .detail-page h3 {
-                font-size: 20px;
+                font-size: 40px;
                 font-weight: bold;
+                color: #000;
+            }
+            
+            .detail-page h4{
+                font-size: 25px;
+                font-weight: 300;
                 color: #000;
             }
 
@@ -300,44 +285,42 @@
             <div id="detail-page1" class="detail-page">
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
-                    <h3>自己紹介の詳細ページ</h3>
+                    <h3>〜自己紹介〜</h3>
+                    <img src="image/IMG_1333.jpg" alt="上中校门" width="200" height="150">
                 </div>
             </div>
             <div id="detail-page2" class="detail-page">
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
-                    <h3>高校入試の詳細ページ</h3>
+                    <h3>〜高校入試〜</h3>
                 </div>
             </div>
             <div id="detail-page3" class="detail-page">
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
-                    <h3>高校生活の詳細ページ</h3>
+                    <h3>〜高校生活〜</h3>
                 </div>
             </div>
             <div id="detail-page4" class="detail-page">
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
-                    <h3>大学入試の詳細ページ</h3>
+                    <h3>〜大学入試〜</h3>
                 </div>
             </div>
             <div id="detail-page5" class="detail-page">
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
-                    <h3>大学生活の詳細ページ</h3>
+                    <h3>〜大学生活〜</h3>
                 </div>
             </div>
             <div id="detail-page6" class="detail-page">
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
-                    <h3>その他の詳細ページ</h3>
+                    <h3>〜その他〜</h3>
                 </div>
             </div>
         </div>
 
-        <!-- <div id="popup" class="popup"> <div class="popup-content"> <button
-        id="closeButton" class="close-button">&times;</button> <div
-        id="popupImageContainer"></div> <p id="popupText"></p> </div> </div> -->
         <script>
             window.addEventListener('scroll', function () {
                 var scrollBackground = document.querySelector('.scroll-background');
@@ -405,24 +388,6 @@
                     .classList
                     .remove('active');
             }
-
-            // var blocks = document.querySelectorAll('.block'); var popup =
-            // document.getElementById('popup'); var popupImageContainer =
-            // document.getElementById('popupImageContainer'); var popupText =
-            // document.getElementById('popupText'); var closeButton =
-            // document.getElementById('closeButton'); blocks.forEach(function (block) {
-            // block.addEventListener('click', function () {         var imageContainer =
-            // block.querySelector('.image-container');         var image =
-            // imageContainer.querySelector('img');         var alt =
-            // image.getAttribute('alt');         var src = image.getAttribute('src'); var
-            // text = block             .querySelector('h2')             .textContent;
-            // popupImageContainer.innerHTML = '';         var popupImage =
-            // document.createElement('img');         popupImage.src = src; popupImage.alt =
-            // alt;         popupImage.style.width = '30%'; popupImage.style.height =
-            // 'auto'; popupImageContainer.appendChild(popupImage); popupText.textContent =
-            // text;         popup.style.display = 'block';     }); });
-            // closeButton.addEventListener('click', function () { popup.style.display =
-            // 'none'; });
         </script>
     </body>
 </html>
