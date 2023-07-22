@@ -3,7 +3,9 @@
 
     <head>
         <meta charset="UTF-8">
-        <title>My LIFE</title>
+        <link rel="stylesheet" type="text/css" href="slick/slick.css">
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        <title>campus tour website</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -108,7 +110,7 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                background-color: #ffdbb3;
+                background-color: #f0e7dc;
 
                 pointer-events: none;
                 z-index: -1;
@@ -122,16 +124,22 @@
 
             .detail-page {
                 /* 以下のスタイルを追加 */
-                display:none;
+                display: none;
+                margin: 0;
                 position: fixed;
                 top: 5%;
                 left: 5%;
                 width: 90%;
                 height: 90%;
-                background-color: #fffaf0;
+                background-color: #fff0d1;
                 z-index: 2;
                 overflow: auto;
                 border: dashed 5px #432f2f;
+                line-height: 1.5;
+            }
+
+            .detail-page .red {
+                color: red;
             }
 
             .detail-page-content {
@@ -139,36 +147,59 @@
                 color: #fff;
             }
 
-            /* .detail-page {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: #fffaf0;
-                text-align: center;
-            }
-
-            .detail-page-content {
-                padding: 20px;
-            }
-            */
             .detail-page.active {
                 display: block;
-            } 
+            }
 
-        
             .detail-page h3 {
                 font-size: 40px;
                 font-weight: bold;
                 color: #000;
+                margin: 0;
             }
-            
-            .detail-page h4{
-                font-size: 25px;
+
+            .detail-page h4 {
+                font-size: 30px;
+                font-weight: bold;
+                color: #000;
+                margin: 0;
+            }
+
+            .detail-page h4 red {
+                color: red;
+            }
+
+            .detail-page h5 {
+                font-size: 20px;
                 font-weight: 300;
                 color: #000;
+                margin: 0;
+            }
+
+            .detail-page h6 {
+                font-size: 10px;
+                font-weight: 300;
+                color: #000;
+            }
+            .detail-page h5 + h5 {
+                margin-top: 0.3em;
+                /* 2つ目の<h4>要素の上側のマージンを調整します */
+            }
+
+            .detail-page h5 + h4 {
+                margin-top: 1em;
+            }
+
+            .detail-page h4 + h5 {
+                margin-top: 0.5em;
+            }
+
+            .detail-page h3 + h5 {
+                margin-top: 0.5em;
+            }
+
+            .detail-page h4 + h4 {
+                margin-top: 1em;
             }
 
             .close-button {
@@ -181,14 +212,32 @@
                 font-size: 100px;
                 cursor: pointer;
             }
-        </style>
+            .slider {
+                padding-left: 0;
+                /* display: flex; */
+                justify-content: center;
+                /* 横方向中央揃え */
+                align-items: center;
+                /* 縦方向中央揃え */
+                margin: 0 auto;
+                width: 50%;
+            }
+            .slider img {
+                width: 100%;
+                height: auto;
+            }
 
+            .slick-next:before,
+            .slick-prev:before {
+                color: #000;
+            }
+        </style>
     </head>
 
     <body>
         <div class="scroll-background"></div>
         <div class="intro">
-            <h1>村 越 潤 也</h1>
+            <h1>村 越 潤 也(tmp)</h1>
             <p>ICUHS42期卒業生</p>
         </div>
         <div class="container">
@@ -199,7 +248,7 @@
                 onclick="openDetailPage(event, 'detail-page1')">
                 <img
                     class="monochrome"
-                    src="image/IMG_5248.jpeg"
+                    src="image/topPage/IMG_5248.jpeg"
                     alt="外灘バックピン写"
                     width="400"
                     height="400">
@@ -214,7 +263,7 @@
                 onclick="openDetailPage(event, 'detail-page2')">
                 <img
                     class="monochrome"
-                    src="image/eiken.jpeg"
+                    src="image/topPage/eiken.jpeg"
                     alt="英検準一級合格発表"
                     width="400"
                     height="400">
@@ -229,7 +278,7 @@
                 onclick="openDetailPage(event, 'detail-page3')">
                 <img
                     class="monochrome"
-                    src="image/IMG_3960.jpeg"
+                    src="image/topPage/IMG_3960.jpeg"
                     alt="学祭青春ショット"
                     width="400"
                     height="400">
@@ -244,7 +293,7 @@
                 onclick="openDetailPage(event, 'detail-page4')">
                 <img
                     class="monochrome"
-                    src="image/IMG_2157.jpeg"
+                    src="image/topPage/IMG_2157.jpeg"
                     alt="ぐうたら"
                     width="400"
                     height="400">
@@ -259,7 +308,7 @@
                 onclick="openDetailPage(event, 'detail-page5')">
                 <img
                     class="monochrome"
-                    src="image/IMG_5074.jpeg"
+                    src="image/topPage/IMG_5074.jpeg"
                     alt="东大门"
                     width="400"
                     height="400">
@@ -274,7 +323,7 @@
                 onclick="openDetailPage(event, 'detail-page6')">
                 <img
                     class="monochrome"
-                    src="image/KIF_2203.jpg"
+                    src="image/topPage/KIF_2203.jpg"
                     alt="幼少期レンガ顔出し"
                     width="400"
                     height="400">
@@ -282,23 +331,65 @@
                     <h2>その他</h2>
                 </div>
             </div>
+
+            <!-- スライドショー -->
+
+            <!-- detail-pageの内容 -->
             <div id="detail-page1" class="detail-page">
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
                     <h3>〜自己紹介〜</h3>
-                    <img src="image/IMG_1333.jpg" alt="上中校门" width="200" height="150">
+                    <ul class="slider">
+                        <li>
+                            <a href="#"><img src="image/自己紹介pic/IMG_5248.jpeg" alt="shanghai"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/自己紹介pic/DSC_8101.JPG" alt="applecupertino"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/自己紹介pic/IMG_2173.JPG" alt="fav"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/自己紹介pic/3876af07e506a8e9a88ffa24048051bc.JPG" alt="dorm"></a>
+                        </li>
+                    </ul>
+                    <h5>ICUHS42期生(2022年3月卒業)</h5>
+                    <h5>上海交通大学电子信息与电气工程学院、学部2年生</h5>
+                    <h5>コンピュータサイエンスメジャー👨‍💻</h5>
+                    <h5>野球⚾️、卓球🏓、アメフト🏈好き</h5>
+                    <h4>〜経歴〜</h4>
+                    <h5>2004年2月29日東京都八王子市で生まれる</h5>
+                    <h5>2010年3月神奈川県鎌倉市の幼稚園を卒園する</h5>
+                    <h5>2010年4月中国上海へ。上海日本人学校虹橋校に入学</h5>
+                    <h5>2016年2月上海中学国際部に転校(Grade 6)</h5>
+                    <h5>2019年1月上海中学国際部中退(Grade 9)</h5>
+                    <h5>2019年4月ICUHS入学</h5>
+                    <h5>2022年3月ICUHS卒業</h5>
+                    <h5>2022年4月電気通信大学入学、2022年8月退学</h5>
+                    <h5>2022年9月〜上海交通大学在学</h5>
                 </div>
             </div>
             <div id="detail-page2" class="detail-page">
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
                     <h3>〜高校入試〜</h3>
+                    <h5>2019年入試、帰国生推薦入試</h5>
+                    <h4>〜取得した資格*〜</h4>
+                    <h5>英検準一級</h5>
+                    <h5>HSK(汉语水平考试)6級</h5>
+                    <h5>*注意：基準となるものではありません、参考までに</h5>
                 </div>
             </div>
             <div id="detail-page3" class="detail-page">
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
                     <h3>〜高校生活〜</h3>
+                    <h4>「<span class="red">最高の場所で最高の仲間たちと最高の時間を過ごした</span>」と自信を持って言える</h4>
+                    <h4>〜野球部〜</h4>
+                    <h5>1年生4月から野球部に所属し、主にファーストとキャッチャーを務めた。</h5>
+                    <h5>初心者が多く、強制坊主、上下関係など厳しいルールがないICUHS野球部でのびのびと楽しく野球をすることができた
+                        2年生からはコロナ禍での活動となり、オンライン授業期間は放課後オンラインでのトレーニングをしたり、対面授業が再開した際には、部活回数/時間が限られている中で効率よく練習できる方法を探した
+                        最終学年はキャプテンを務め、さまざまな環境での野球を経験してきた仲間たちと共に、チームを作り上げた 一生の仲になるであろうチームメイト、友達ができた</h5>
                 </div>
             </div>
             <div id="detail-page4" class="detail-page">
@@ -321,6 +412,9 @@
             </div>
         </div>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="slick/slick.min.js"></script>
         <script>
             window.addEventListener('scroll', function () {
                 var scrollBackground = document.querySelector('.scroll-background');
@@ -329,7 +423,7 @@
                 var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 var opacity = Math.max(
                     0,
-                    Math.min(1, 1 - (scrollTop - introHeight + 200) / 1000)
+                    Math.min(1, 1 - (scrollTop - introHeight + 200) / 2000)
                 );
 
                 scrollBackground.style.opacity = opacity;
@@ -358,7 +452,7 @@
                     if (!startTime) 
                         startTime = timestamp;
                     var progress = timestamp - startTime;
-                    var ratio = Math.min(progress / 500, 1); // アニメーション時間を500msに設定
+                    var ratio = Math.min(progress / 100, 1); // アニメーション時間を100msに設定
 
                     // モノクロからフルカラーに徐々に変化させる
                     var value = currentValue + (targetValue - currentValue) * ratio;
@@ -388,6 +482,10 @@
                     .classList
                     .remove('active');
             }
+
+            $(function () {
+                $('.slider').slick({autoplay: true, autoplaySpeed: 3000, dots: true});
+            });
         </script>
     </body>
 </html>
