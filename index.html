@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="slick/slick.css">
@@ -38,6 +37,11 @@
 
             ul {
                 list-style-type: none;
+            }
+            
+            ul.TIPS {
+                list-style: disc;
+                color: black;
             }
 
             .monochrome {
@@ -214,17 +218,21 @@
             }
             .slider {
                 padding-left: 0;
+                margin: 0 auto;
                 /* display: flex; */
                 justify-content: center;
                 /* 横方向中央揃え */
                 align-items: center;
                 /* 縦方向中央揃え */
-                margin: 0 auto;
-                width: 50%;
+                width: 60%;
+                /* スライダーの高さを60%に指定 */
             }
+
             .slider img {
-                width: 100%;
-                height: auto;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: contain;
+                /* 画像を縦横比を保ったまま収める */
             }
 
             .slick-next:before,
@@ -278,7 +286,7 @@
                 onclick="openDetailPage(event, 'detail-page3')">
                 <img
                     class="monochrome"
-                    src="image/topPage/IMG_3960.jpeg"
+                    src="image/topPage/IMG_6757.PNG"
                     alt="学祭青春ショット"
                     width="400"
                     height="400">
@@ -341,31 +349,31 @@
                     <h3>〜自己紹介〜</h3>
                     <ul class="slider">
                         <li>
-                            <a href="#"><img src="image/自己紹介pic/IMG_5248.jpeg" alt="shanghai"></a>
+                            <a href="#"><img src="image/自己紹介pic/IMG_2185.PNG" alt="shanghai"></a>
                         </li>
                         <li>
-                            <a href="#"><img src="image/自己紹介pic/DSC_8101.JPG" alt="applecupertino"></a>
+                            <a href="#"><img src="image/自己紹介pic/IMG_2186.PNG" alt="applecupertino"></a>
                         </li>
                         <li>
-                            <a href="#"><img src="image/自己紹介pic/IMG_2173.JPG" alt="fav"></a>
+                            <a href="#"><img src="image/自己紹介pic/IMG_2187.PNG" alt="fav"></a>
                         </li>
                         <li>
-                            <a href="#"><img src="image/自己紹介pic/3876af07e506a8e9a88ffa24048051bc.JPG" alt="dorm"></a>
+                            <a href="#"><img src="image/自己紹介pic/IMG_2188.PNG" alt="dorm"></a>
                         </li>
                     </ul>
+                    <h5>村越潤也（むらじゅん）</h5>
                     <h5>ICUHS42期生(2022年3月卒業)</h5>
                     <h5>上海交通大学电子信息与电气工程学院、学部2年生</h5>
                     <h5>コンピュータサイエンスメジャー👨‍💻</h5>
-                    <h5>野球⚾️、卓球🏓、アメフト🏈好き</h5>
-                    <h4>〜経歴〜</h4>
+                    <h5>野球⚾️、アメフト🏈、卓球🏓好き</h5>
+                    <h4>経歴</h4>
                     <h5>2004年2月29日東京都八王子市で生まれる</h5>
-                    <h5>2010年3月神奈川県鎌倉市の幼稚園を卒園する</h5>
-                    <h5>2010年4月中国上海へ。上海日本人学校虹橋校に入学</h5>
-                    <h5>2016年2月上海中学国際部に転校(Grade 6)</h5>
-                    <h5>2019年1月上海中学国際部中退(Grade 9)</h5>
-                    <h5>2019年4月ICUHS入学</h5>
-                    <h5>2022年3月ICUHS卒業</h5>
-                    <h5>2022年4月電気通信大学入学、2022年8月退学</h5>
+                    <h5>2010年神奈川県鎌倉市の幼稚園を卒園する</h5>
+                    <h5>2010年中国上海へ。上海日本人学校虹橋校に入学</h5>
+                    <h5>2016年上海中学国際部に転校</h5>
+                    <h5>2019年ICUHS入学</h5>
+                    <h5>2022年ICUHS卒業</h5>
+                    <h5>2022年4月電気通信大学入学。7月、退学</h5>
                     <h5>2022年9月〜上海交通大学在学</h5>
                 </div>
             </div>
@@ -373,48 +381,156 @@
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
                     <h3>〜高校入試〜</h3>
+                    <ul class="slider">
+                        <li>
+                            <a href="#"><img src="image/高校入試pic/IMG_2193.PNG" alt="SHSID"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/高校入試pic/IMG_2195.PNG" alt="hara"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/高校入試pic/IMG_2229.PNG" alt="entrance"></a>
+                        </li>
+                    </ul>
                     <h5>2019年入試、帰国生推薦入試</h5>
-                    <h4>〜取得した資格*〜</h4>
+                    <h5>ICUHS専願</h5>
+                    <h4>面接TIPS</h4>
+                    <ul class = "TIPS">
+                        <li><h5>面接の時間は5ー10分ほどで、先生方が二人教室で座っていて、その対面の椅子に座ります。</h5></li>
+                        <li><h5>自己PRカードは自分の魂を乗っける場所です、思いのままに自分が書きたいことを書いてください。その内容を読み込んだ先生方が質問してくださいます。</h5></li>
+                        <li><h5>一般的に想定される面接質問だけでなく、自分で自分のPRカードを読み直し、自分が何を伝えたいのか理解することも有用だと自分は思います。</h5></li>
+                        <li><h5>取り繕う必要はないです。あなた自身が海外生活で感じたこと、成長した点を堂々と先生方にぶつけてください。</h5></li>
+                        <li><h5>空気感は面接官の先生によってだいぶ違うという噂ですが、自分の場合はすごく和やかな面接でした</h5></li>
+                        <li><h5>受験日の服装、身だしなみに関しては、スーツ、ポロシャツ、私服など様々な格好をしている人がいましたが、面接ということもありスーツが多数だった印象があります</h5></li>
+                        <li><h5>（入学後に友達になった子が私服金髪で受験していたという話もあるので、あまり参考にはならないかもしれませんが）</h5></li>
+                    </ul>
+                    <h4>取得していた資格*</h4>
                     <h5>英検準一級</h5>
                     <h5>HSK(汉语水平考试)6級</h5>
-                    <h5>*注意：基準となるものではありません、参考までに</h5>
+                    <h5 class="red">*注意：基準となるものではありません、参考までに</h5>
                 </div>
             </div>
             <div id="detail-page3" class="detail-page">
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
                     <h3>〜高校生活〜</h3>
+                    <ul class="slider">
+                        <li>
+                            <a href="#"><img src="image/高校生活pic/IMG_2202.PNG" alt="sportsmeet"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/高校生活pic/IMG_2203.PNG" alt="schoolfes"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/高校生活pic/IMG_2204.PNG" alt="gyaru"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/高校生活pic/IMG_2205.PNG" alt="disney"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/高校生活pic/IMG_2206.PNG" alt="ICUHSbaseball"></a>
+                        </li>
+                    </ul>
                     <h4>「<span class="red">最高の場所で最高の仲間たちと最高の時間を過ごした</span>」と自信を持って言える</h4>
-                    <h4>〜野球部〜</h4>
+                    <h4>野球部</h4>
                     <h5>1年生4月から野球部に所属し、主にファーストとキャッチャーを務めた。</h5>
-                    <h5>初心者が多く、強制坊主、上下関係など厳しいルールがないICUHS野球部でのびのびと楽しく野球をすることができた
-                        2年生からはコロナ禍での活動となり、オンライン授業期間は放課後オンラインでのトレーニングをしたり、対面授業が再開した際には、部活回数/時間が限られている中で効率よく練習できる方法を探した
-                        最終学年はキャプテンを務め、さまざまな環境での野球を経験してきた仲間たちと共に、チームを作り上げた 一生の仲になるであろうチームメイト、友達ができた</h5>
+                    <h5>初心者が多く、強制坊主、上下関係など厳しいルールがないICUHS野球部でのびのびと楽しく野球をすることができた。</h5>
+                    <h5>2年生からはコロナ禍での活動となり、オンライン授業期間は放課後オンラインでのトレーニングをしたり、対面授業が再開した際には、部活回数/時間が限られている中で効率よく練習できる方法を探した。</h5>
+                    <h5>最終学年はキャプテンを務め、さまざまな環境での野球を経験してきた仲間たちと共に、チームを作り上げた。</h5>
+                    <h5>一生の仲になるであろうチームメイト、友達ができた。</h5>
+                    <h4>学校祭実行委員</h4>
+                    <h5>1年生から学校祭実行委員本部に所属し、運営に関わる仕事を2年生の本部のサポートという形でした。ものすごく忙しかったがその分青春感と充実感はあった。</h5>
+                    <h5>2年生になると運営の中心となっていく予定だったが、コロナ禍で例年通りの学校祭の開催が難しくなり、その代わりに自分たちで一からオンラインイベント(The Fes
+                        Day)を企画、運営した。体育館から全教室に映像を配信するという形で行った異色の学校祭。そのイベントで参加生徒たちが楽しんでくれていたのがとても嬉しかった。</h5>
+                    <h5>卒業後も本部のメンバーとは頻繁に連絡を取っていて、一部メンバーで現在来年の成人式兼同窓会の運営も計画中</h5>
+                    <h4>日常生活</h4>
+                    <h5>周りから刺激を受け続ける毎日だった。</h5>
+                    <h5>勉強も運動もトップレベルにできる友達や、国際オリンピックで賞を取るような友達、また帰りのHRで味噌汁を食べだす友達など、色んな意味で狂った(?)人たちが集まる場所で、自分も感化されながら3年間を過ごした。</h5>
+                    <h5>一、二年生の期間はとにかく学校のイベントや部活に注力し、勉強は試験前にするくらいの生活だったが、三年生になり、部活はあるもののコロナ禍で練習回数が制限されていたのもあり、受験勉強が主となる生活が始まった。</h5>
+                    <h5>それでいても、三年生時の体育祭では団長というクラスの当日の流れを仕切る役割をしたり、イベントには積極的に参加していた。</h5>
+                    <h5>コロナ禍で様々なことが規制されていた高校生活後半だったが、その中で自分たちができることをし、コロナ禍でしか経験できない学びも数えきれないほどあったと思う。</h5>
+                    <h5>自分にとってICUHSでの高校3年間は悔いのない充実したものだったと言える。</h5>
                 </div>
             </div>
             <div id="detail-page4" class="detail-page">
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
                     <h3>〜大学入試〜</h3>
-                </div>
+                    <ul class="slider">
+                        <li>
+                            <a href="#"><img src="image/大学入試pic/IMG_2217.PNG" alt="studying"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/大学入試pic/IMG_2218.PNG" alt="akahon"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/大学入試pic/IMG_2226.PNG" alt="unientrance"></a>
+                        </li>
+                    </ul>
+                    <h4>国内大学</h4>
+                    <h5>-帰国生受験</h5>
+                    <h5>3年生の夏休み後くらいのタイミングで、国内私立大学理系学部を帰国生枠で受験した。志望理由書、資格等の提出、学力試験(理系科目)、面接での受験をした。</h5>
+                    <h5>ここで一つ合格をもらっていたことが、後の一般受験での若干の精神的な余裕になっていたと思う。</h5>
+                    <h5></h5><h5>-一般受験</h5>
+                    <h5>第一志望の国公立理系大学を目指し、共通テストを5教科7科目受験し、個別試験も受けた。国公立は前期と後期、私立は二、三個出願した。</h5>
+                    <h5>自分は高校2年生の終わり頃から一般受験に向けて塾に通いだし、学校と塾の勉強を無理なく両立することができていたと思う。</h5>
+                    <h5>文系が多数のICUHSでは理系は仲間意識が強く、よく一緒に勉強したり、定期テストの際には点数を争ったりと、良き仲間でもあり良きライバルでもあった。
+                        そこで周りの集団と圧倒的な差があると気づいた自分は、母が言うには「人が変わったように」勉強に向き合うようになった。受験期間はお互いに励まし合い、刺激を与えられながら乗り切った。</h5>
+                    <h4>海外大学(中国の大学)</h4>
+                    <h5>受験期の10月ごろに突然中国の大学の受験を思い立ち、翌年1月には出願するというかなりのスピード受験だった。自分は海外大学受験者でも珍しい、一般受験と両立しながらの受験であった。</h5>
+                    <h5>海外大学は今通っている大学以外は受けておらず、不合格だったら日本の大学に通おうと思っていた。</h5>
+                    <h5>中国の大学を受験しようと決めたのは、何か他の人から言われたり、きっかけがあったわけではなくふと思いついたことだった。中国の目まぐるしいITの進化を間近でみていた自分は、情報系の学部に進もうと考えていたこともあり、飛び込むなら今しかない!と思った。</h5>
+                    <h5>上海交通大学を留学生枠で受験し、Personal statement、推薦書2通、学力を証明できる大学入試テスト(SAT、A-Level、共通テスト等)、英語の試験(TOEFL、IELTS等)、学力試験(英語、数学、物理)、面接があった。</h5>
+                    <h5>学力試験もオンライン受験だったので、中国に行くことなく日本から受験することができた。</h5>
+                    </div>
             </div>
             <div id="detail-page5" class="detail-page">
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
                     <h3>〜大学生活〜</h3>
-                </div>
+                    <ul class="slider">
+                        <li>
+                            <a href="#"><img src="image/大学生活pic/IMG_2220.PNG" alt="amefoot"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/大学生活pic/IMG_2221.PNG" alt="HR"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/大学生活pic/IMG_2222.PNG" alt="dabai"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/大学生活pic/IMG_2223.PNG" alt="chongqing"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="image/大学生活pic/IMG_2224.PNG" alt="drone"></a>
+                        </li>
+                    </ul>
+                    <h4>国内大学</h4>
+                    <h5>卒業した年の4-7月までは電気通信大学に所属し(海外大学の結果発表が4月以降だったため)、1学期間だけ日本での大学生活を送った。
+                        アメフト部に入部し、素晴らしい先輩と仲間に恵まれて、短期間ではあったが楽しく、また強くなれたアメフト部生活だった。</h5>
+                    <h4>海外大学</h4>
+                        <h5>9月からは中国の大学の学期が始まり、新しい環境と人間関係の中での生活が始まった。小・中学生の時に上海に住んでいたとはいえ、家族で住んでいたのと自分1人で住むのは全く違う。
+                            上海に住んでいる知人や同級生に助けられながら生活に慣れることができ、学校では中国人や他の国から来た留学生の友達もできた。</h5> 
+                        <h5>上海でも野球は続けていて、キャンパス内のグラウンドで週2回ほどではあるが、練習や試合を行っている。先日、練習試合で柵越えのホームランを打ち、ピッチャーでは無失点登板をしたので、自称「上海の大谷」状態である。</h5>
+                        <h5>中国の大学は基本全寮制で、キャンパス内で生活が完結してしまう。自分の1日は、ご飯は三食食堂で食べ、教室で授業を受け、ジムで筋トレをし、寮に帰って勉強して寝る、という生活だ。</h5>
+                        <h5>週末は基本野球をしたり、街の方に出て遊びに行ったりすることが多い。ただテスト前になると土日丸々図書館で過ごす、なんていう時もあったりする。</h5>
+                        <h5>それでも自分が続けていられているのは自分が今勉強していることに興味があって、熱意があるから。本当のところ、自分が将来どの国で生きていくのかまだ想像がついていない部分もあるが、今後も国という枠にとらわれず
+                            たくさんと人と関わり、自分の好きなことを探究していく人生にしたいと思う。そして自分の夢である「日本人を超えた日本人になる」という目標に一歩でも近づきたいと思う。</h5>
+                    </div>
             </div>
             <div id="detail-page6" class="detail-page">
                 <button class="close-button" onclick="closeDetailPage(event)">&times;</button>
                 <div class="detail-page-content">
                     <h3>〜その他〜</h3>
+                    <h5>ご質問等ございましたら下記のGoogle Formにて質問していただければ、お答えできる範囲で答えさせていただきます。</h5>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeKt_vNTJhInSf24hC9gDJvc00FNhnSvldsdwTlHUy3tuyzeA/viewform?embedded=true" width="800" height="511" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
                 </div>
             </div>
         </div>
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="slick/slick.min.js"></script>
+
         <script>
             window.addEventListener('scroll', function () {
                 var scrollBackground = document.querySelector('.scroll-background');
@@ -484,8 +600,11 @@
             }
 
             $(function () {
-                $('.slider').slick({autoplay: true, autoplaySpeed: 3000, dots: true});
+                $('.slider').slick(
+                    {autoplay: true, autoplaySpeed: 3000, dots: true, fade: true, adaptiveHeight: true}
+                );
             });
         </script>
+
     </body>
 </html>
