@@ -7,6 +7,8 @@ redirect_from:
   - /about.html
 ---
 
+---
+
 Hi, I am **Junya Murakoshi**, a Japanese🇯🇵 student in China🇨🇳, pursuing my goal of becoming an engineer who works across borders and creates global impact.
 
 I am a Master degree student in the **CyberSpace Security** program at Shanghai Jiao Tong University.  
