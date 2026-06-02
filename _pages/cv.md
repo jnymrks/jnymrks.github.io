@@ -11,33 +11,33 @@ redirect_from:
 
 Education
 ======
-* M.S. in Cyberspace Security, Shanghai Jiao Tong University, 2029(expected)
+* M.S. in Cyberspace Security, Shanghai Jiao Tong University, Expected 2029
 * B.S. in Computer Science, Shanghai Jiao Tong University, 2026
 * International Christian University High School (Tokyo), 2022
 
 Work experience
 ======
-* Summer 2025: Research Intern
-  * Network Security and Privacy Protection Lab, SJTU
-  * Responsibility: Conducted security research on DNN systems, including model reproduction, experimental setup, and evaluation of fault-injection attacks in autonomous driving and secure computing environments.
+* **Research Intern**  
+  *Network Security and Privacy Protection Lab, Shanghai Jiao Tong University | June 2025 - August 2025*
   * Supervisor: Yan Meng
+  * Conducted security research on DNN systems, including model reproduction, experimental setup, and evaluation of fault-injection attacks in autonomous driving and secure computing environments.
 
 Projects
 ========
 
-* Bachelor's Thesis: Perception Degradation Attacks against Autonomous Driving Systems  
+* **Bachelor's Thesis: Perception Degradation Attacks against Autonomous Driving Systems**  
   *Network Security and Privacy Protection Lab, Shanghai Jiao Tong University | September 2025 – June 2026*
   - Investigated the security of multimodal perception systems in autonomous driving.
   - Designed and implemented an automated pipeline for identifying single-bit fault locations that significantly degrade perception performance.
   - Evaluated the proposed pipeline on Autoware and Apollo, two open-source autonomous driving platforms.
 
-* Security Evaluation of DNN-Based Perception Models under Fault-Injection Attacks  
+* **Security Evaluation of DNN-Based Perception Models under Fault-Injection Attacks**  
   *Network Security and Privacy Protection Lab, Shanghai Jiao Tong University | June 2025 - August 2025*
   * Reproduced object detection models used in autonomous driving perception systems.
   * Set up experimental environments and evaluated the impact of fault-injection attacks on model inference.
   * Worked with PyTorch, Apollo, Autoware, NuScenes, Intel SGX, and LLVM-based fault-injection tools.
 
-* Home Lab Network Infrastructure
+* **Home Lab Network Infrastructure**  
   *Home Laboratory | December 2025 - Present*
   - Built a private home lab network for server hosting, routing, and security experimentation.
   - Developed and deployed full-stack web applications in the lab environment, including MERN-stack projects.
