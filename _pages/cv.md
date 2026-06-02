@@ -41,6 +41,8 @@ Projects
   *Home Laboratory | December 2025 - Present*
   - Built a private home lab network for server hosting, routing, and security experimentation.
   - Developed and deployed full-stack web applications in the lab environment, including MERN-stack projects.
+ 
+![homelab_screenshot_1](images/bio-photo.jpg)
 
 
 Skills
@@ -55,6 +57,7 @@ Publications
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
+
 
 Service and Leadership
 ======
