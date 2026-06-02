@@ -37,20 +37,19 @@ Projects
   * Set up experimental environments and evaluated the impact of fault-injection attacks on model inference.
   * Worked with PyTorch, Apollo, Autoware, NuScenes, Intel SGX, and LLVM-based fault-injection tools.
 
-* [Home Lab Project Title]  
+* Home Lab Network Infrastructure
   *Home Laboratory | December 2025 - Present*
-  - Worked on [research/development topic].
-  - Implemented [algorithm/system/tool].
-  - Analyzed [results/performance/security/privacy/etc.].
-  
+  - Built a private home lab network for server hosting, routing, and security experimentation.
+  - Developed and deployed full-stack web applications in the lab environment, including MERN-stack projects.
+
+
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Programming: Python, C/C++, JavaScript
+* Security: Web security, Burp Suite, cryptography fundamentals, network security
+* Infrastructure: Linux Server, Docker, Git/GitHub, home lab networking
+* Web Development: Node.js, Express, React, MongoDB
+* Languages: Japanese, Chinese, English
 
 Publications
 ======
@@ -61,4 +60,4 @@ Publications
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Founder and President of SJTU Japanese Student Association
