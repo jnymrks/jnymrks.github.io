@@ -26,19 +26,19 @@ Projects
 ========
 
 * Bachelor's Thesis: Perception Degradation Attacks against Autonomous Driving Systems  
-  **Network Security and Privacy Protection Lab, Shanghai Jiao Tong University | September 2025 – June 2026**
+  *Network Security and Privacy Protection Lab, Shanghai Jiao Tong University | September 2025 – June 2026*
   - Investigated the security of multimodal perception systems in autonomous driving.
   - Designed and implemented an automated pipeline for identifying single-bit fault locations that significantly degrade perception performance.
   - Evaluated the proposed pipeline on Autoware and Apollo, two open-source autonomous driving platforms.
 
 * Security Evaluation of DNN-Based Perception Models under Fault-Injection Attacks  
-  **Network Security and Privacy Protection Lab, Shanghai Jiao Tong University | June 2025 - August 2025**
+  *Network Security and Privacy Protection Lab, Shanghai Jiao Tong University | June 2025 - August 2025*
   * Reproduced object detection models used in autonomous driving perception systems.
   * Set up experimental environments and evaluated the impact of fault-injection attacks on model inference.
   * Worked with PyTorch, Apollo, Autoware, NuScenes, Intel SGX, and LLVM-based fault-injection tools.
 
 * [Home Lab Project Title]  
-  **Home Laboratory | December 2025 - Present**
+  *Home Laboratory | December 2025 - Present*
   - Worked on [research/development topic].
   - Implemented [algorithm/system/tool].
   - Analyzed [results/performance/security/privacy/etc.].
