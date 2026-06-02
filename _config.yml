@@ -23,7 +23,7 @@ repository               : "jnymrks/jnymrks.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "Photo.jpeg"
   name             : "Junya Murakoshi"
   pronouns         : # example: "she/her"  
   bio              : "You can seek the comfortable or the meaningful. Choose wisely."
