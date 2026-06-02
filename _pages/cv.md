@@ -22,6 +22,12 @@ Work experience
   * Supervisor: Yan Meng
   * Conducted security research on DNN systems, including model reproduction, experimental setup, and evaluation of fault-injection attacks in autonomous driving and secure computing environments.
 
+Publications
+======
+  <ul>{% for post in site.publications reversed %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+
 Projects
 ========
 
@@ -51,12 +57,6 @@ Skills
 * Security: IoT security, network security
 * Infrastructure: Linux Server, Docker, Git/GitHub, home lab networking
 * Languages: Japanese, Chinese, English
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
 
 
 Service and Leadership
