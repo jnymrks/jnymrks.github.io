@@ -16,5 +16,5 @@ I belong to [Network Security and Privacy Protection Lab (NSEC)](https://nsec.sj
 
 Research Interest
 ======
-* IoT Security 🚗📷
-* AI for Security
+* Automotive Cybersecurity 🚗
+* In-Vehicle Network Security
