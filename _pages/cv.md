@@ -42,7 +42,7 @@ Projects
   - Built a private home lab network for server hosting, routing, and security experimentation.
   - Developed and deployed full-stack web applications in the lab environment, including MERN-stack projects.
  
-![homelab_screenshot_1](images/bio-photo.jpg)
+![homelab_screenshot_1](images/photo_new.jpeg)
 
 
 Skills
