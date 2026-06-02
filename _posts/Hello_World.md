@@ -1,3 +1,11 @@
+---
+title: 'Hello, World!'
+date: 2026-06-02
+permalink: /posts/2026/06/blog-post-1/
+tags:
+  - greeting
+---
+
 # Hello World!
 2026/06/02
 
