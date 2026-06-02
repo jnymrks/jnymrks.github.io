@@ -1,6 +1,6 @@
 ---
 title: "Achilles’ Heel of Autonomous Driving: Fault Injection Attacks on
-Multimodal Perception Systems"
+Multimodal Perception Systems (co-author)"
 collection: publications
 category: conferences
 permalink: /publication/mmflip
