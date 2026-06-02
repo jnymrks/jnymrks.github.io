@@ -61,3 +61,4 @@ Publications
 Service and leadership
 ======
 * Founder and President of SJTU Japanese Student Association
+* CSC Chinese Government Scholarship (September 2023 - Present)
