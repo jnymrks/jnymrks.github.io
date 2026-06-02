@@ -46,9 +46,8 @@ Projects
 Skills
 ======
 * Programming: Python, C/C++, JavaScript
-* Security: Web security, Burp Suite, cryptography fundamentals, network security
+* Security: IoT security, network security
 * Infrastructure: Linux Server, Docker, Git/GitHub, home lab networking
-* Web Development: Node.js, Express, React, MongoDB
 * Languages: Japanese, Chinese, English
 
 Publications
@@ -57,8 +56,12 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
 
-  
-Service and leadership
+Service and Leadership
 ======
-* Founder and President of SJTU Japanese Student Association
-* CSC Chinese Government Scholarship (September 2023 - Present)
+* **Founder and President, SJTU Japanese Student Association**  
+  *December 2025 - Present*
+
+Awards and Honors
+======
+* **CSC Chinese Government Scholarship**  
+  *September 2023 – Present*
