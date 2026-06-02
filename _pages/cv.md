@@ -11,26 +11,37 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* M.S. in Cyberspace Security, Shanghai Jiao Tong University, 2029(expected)
+* B.S. in Computer Science, Shanghai Jiao Tong University, 2026
+* International Christian University High School (Tokyo), 2022
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Summer 2025: Research Intern
+  * Network Security and Privacy Protection Lab, SJTU
+  * Responsibility: Conducted security research on DNN systems, including model reproduction, experimental setup, and evaluation of fault-injection attacks in autonomous driving and secure computing environments.
+  * Supervisor: Yan Meng
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+Projects
+========
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Bachelor's Thesis: Research on Perception Degradation Attack against Autonomous Driving Systems
+  Network Security and Privacy Protection Lab, Shanghai Jiao Tong University | September 2025 - June 2026
+  - Conducted research on security of multimodal perception systems on autonomous driving systems.
+  - Designed and implemented the automated pipeline to identigy the candidates that significantly degrade the perception result by a single bit-flip attack.
+  - Evaluated the pipeline on two difference open-source autonomous driving platforms: Autoware and Apollo.
+
+* Security Evaluation of DNN-Based Perception Models under Fault-Injection Attacks
+  Network Security and Privacy Protection Lab, Shanghai Jiao Tong University | June 2025 - August 2025
+  - Reproduced object detection models used in autonomous driving perception systems.
+  - Set up experimental environments and evaluated the impact of fault-injection attacks on model inference.
+  - Worked with PyTorch, Apollo, Autoware, NuScenes, Intel SGX, and LLVM-based fault-injection tools.
+
+* [Home Lab Project Title]
+  [Home Laboratory / University] | [Month Year – Present]
+  - Worked on [research/development topic].
+  - Implemented [algorithm/system/tool].
+  - Analyzed [results/performance/security/privacy/etc.].
   
 Skills
 ======
@@ -46,18 +57,7 @@ Publications
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+
   
 Service and leadership
 ======
