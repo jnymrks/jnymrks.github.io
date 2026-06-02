@@ -1,14 +1,16 @@
 ---
 title: "Achilles’ Heel of Autonomous Driving: Fault Injection Attacks on
-Multimodal Perception Systems (co-author)"
+Multimodal Perception Systems"
 collection: publications
 category: conferences
 permalink: /publication/mmflip
-excerpt: 'Evaluating fault injection attack against multimodal perception on autonomous driving systems'
+excerpt: "A study on fault injection attacks against multimodal perception systems in autonomous driving."
 date: 2026-06-01
-venue: 'ACM CCS B'
-paperurl: 'not yet published'
+venue: ''
+paperurl: ''
 citation: ''
 ---
 
-mmFlip
+MMFlip is a research project that investigates fault injection attacks against multimodal perception systems in autonomous driving platforms.
+
+I contributed to this work as the fourth author.
